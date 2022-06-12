@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-xs-12">
+      <div
+        class="panel panel-default"
+        >
+        <div class="panel-heading">{{ element.name }}</div>
+        <div class="panel-body">
+          <p #contentParagraph>
+            <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
+            <em *ngIf="element.type === 'blueprint'" style="color: blue;">{{ element.content }}</em>           
+          </p>
+          <p class="dog">Amazing Dog</p>
+          <input type="text" #name><!--local reference = #name-->
+          <button type="submit" (click)="onSubmit(name)"></button>
+          <input type="text" #name2><!--local reference = #name-->
+          <button type="submit" (click)="onSubmit2(name2)"></button>
+        </div>
+      </div>
+    </div>
+  </div>
